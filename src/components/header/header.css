@@ -1,0 +1,21 @@
+#divHeader{
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    width: 90%;
+    max-width: 800px;
+    left: 50%;
+    top: 2%;
+    transform: translateX(-50%);
+    align-items: center;
+    justify-content: space-around;
+}
+#divHeader svg{
+    cursor: pointer;
+    transition: all .2s;
+
+}
+#divHeader svg:hover{
+    position: relative;
+    transform: translateY(-3px);   
+}
