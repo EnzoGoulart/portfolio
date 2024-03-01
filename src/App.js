@@ -75,14 +75,13 @@ function App() {
 
   useEffect(() => {
     let linguaStorage = localStorage.getItem("lingua")
-    if(!linguaStorage){
-        setLingua("pt")
-        localStorage.setItem("lingua", lingua)
+    if(!linguaStorage || linguaStorage == null){
+        setLingua("pt")  
     } else {
         setLingua(linguaStorage)
     }  
-
-    traducao(linguaStorage)
+    
+    mudaLingua(lingua)
   }, []);
   async function insertFirebase() {
     try {
