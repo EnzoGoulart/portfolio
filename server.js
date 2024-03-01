@@ -4,24 +4,19 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-// Middleware
 app.use(bodyParser.json());
 
-// Conectar ao banco de dados
 mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Conectado ao MongoDB'))
   .catch(err => console.error('Erro ao conectar ao MongoDB:', err));
 
-// Definir o esquema da coleção 'caixa'
 const caixaSchema = new mongoose.Schema({
   resp: { type: String, required: true },
   email: { type: String, required: true }
 });
 
-// Definir o modelo 'Caixa'
 const Caixa = mongoose.model('Caixa', caixaSchema);
 
-// Rota para inserir um novo documento na coleção 'caixa'
 app.post('/api/caixa', async (req, res) => {
   const { resp, email } = req.body;
 

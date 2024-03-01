@@ -9,6 +9,44 @@
      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.219);
      z-index: 4;
 }
+#btnTraduzirH{
+    border: none;
+    background-color: #26522b;
+    border: 3px solid #1e3b21;
+    color: white;
+    font-family: "Pangolin","Roboto",cursive;
+    height: 55px;
+    font-size: 14px;
+    border-radius: 12px;
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+    transition: ease-in-out .4s;
+    position: absolute;
+    top: 8%;
+    left: 3%;
+}
+#opcoesTrad{ 
+    width: 85%;
+    margin: 15px auto; 
+}
+#opcaoTrad{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 00px 15px 0px;
+    align-items: center;
+}
+#btnOpcaoTrad{
+    padding: 15px;
+    border-radius: 50%;
+    border: 3px solid #26522b;
+    cursor: pointer; 
+}
+#txtOpcaoTrad{
+    color: white;
+    font-family: "Pangolin","Roboto",cursive;
+    padding-left: 20px;
+}
 #imgH{
     width: 130px;
     height: 130px;
@@ -357,6 +395,11 @@
     }
 }
 @media screen and (width >600px) {
+    #btnTraduzirH{  
+        font-size: 14px;
+        width: 100px;
+        height: 55px; 
+    }
     .divBoxes3{
         justify-content: space-around;
         width: 40%;
@@ -485,6 +528,12 @@
     #containerH{ 
         padding: 0px 20%; 
        }
+    #btnTraduzirH{  
+        font-size: 16px;
+        width: 120px;
+        height: 60px; 
+        left: 20%;
+    }
 }
 @media screen and (width > 1250px){
     #containerH{ 
@@ -506,3 +555,4 @@
         padding: 0px 35%; 
        }  
 }
+
